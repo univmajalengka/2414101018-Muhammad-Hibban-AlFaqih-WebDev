@@ -1,0 +1,743 @@
+/* =========================RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f4;
+  color: #222;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  background: #1b5e20;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 1.6rem;
+}
+
+.tag {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* =========================
+   HERO / SLIDER
+========================= */
+.hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #c7c7c7;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #1b5e20;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about h2 {
+  text-align: center;
+  margin: 40px 0 10px;
+}
+
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* =========================
+   PAKET WISATA
+========================= */
+.paket h2 {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.paket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.paket-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.paket-card:hover {
+  transform: translateY(-6px);
+}
+
+.paket-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.paket-body {
+  padding: 15px;
+}
+
+.paket-body h3 {
+  margin-bottom: 6px;
+}
+
+.harga {
+  font-weight: bold;
+  color: #1b5e20;
+  margin: 8px 0;
+}
+
+.btn {
+  background: #1b5e20;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.btn:hover {
+  background: #2e7d32;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid #1b5e20;
+  color: #1b5e20;
+}
+
+.btn.ghost:hover {
+  background: #c8e6c9;
+}
+
+
+/* =========================
+   GALERI FOTO
+========================= */
+.galeri h2 {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.galeri-grid img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background: #1b5e20;
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    background: #1b5e20;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav ul.open {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* --- Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f4;
+  color: #222;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+/* --- Layout Helper --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========================= HEADER ========================= */
+.site-header {
+  background: #1b5e20;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 1.6rem;
+}
+
+.tag {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ========================= HERO / SLIDER ========================= */
+.hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #1b5e20;
+}
+
+/* ========================= ABOUT ========================= */
+.about h2 {
+  margin: 40px 0 10px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+/* ========================= PAKET WISATA ========================= */
+.paket h2 {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.paket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.paket-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.paket-card:hover {
+  transform: translateY(-6px);
+}
+
+.paket-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.paket-body {
+  padding: 15px;
+}
+
+.paket-body h3 {
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+}
+
+.harga {
+  font-weight: bold;
+  color: #1b5e20;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: #1b5e20;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+.btn:hover {
+  background: #2e7d32;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #1b5e20;
+  border: 2px solid #1b5e20;
+}
+
+.btn.ghost:hover {
+  background: #c8e6c9;
+}
+
+/* ========================= GALERI FOTO ========================= */
+.galeri h2 {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 1.8rem;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.galeri-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 180px;
+}
+
+/* ========================= FOOTER ========================= */
+.site-footer {
+  background: #1b5e20;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ========================= MOBILE ========================= */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    background: #1b5e20;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav ul.open {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* tinggi header */
+}
+.form-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.form-box {
+  background: #fff;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+/* =========================
+   FORM PEMESANAN (tema hijau)
+   Paste this at the end of style.css
+========================= */
+
+.form-wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: 36px auto;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(27,94,32,0.06);
+}
+
+/* judul */
+.form-wrapper h2 {
+  margin: 0 0 18px 0;
+  font-size: 1.9rem;
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+/* grid input */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 18px;
+  align-items: center;
+}
+
+/* pada layar kecil jadikan 1 kolom */
+@media (max-width: 920px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* tiap field container (label + input) */
+.form-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* label */
+.form-grid label {
+  font-weight: 600;
+  color: #174f24;
+  margin-bottom: 6px;
+  font-size: 0.98rem;
+}
+
+/* input / number / date */
+.form-grid input[type="text"],
+.form-grid input[type="date"],
+.form-grid input[type="tel"],
+.form-grid input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  font-size: 1rem;
+  background: #fff;
+  transition: box-shadow .15s, border-color .15s;
+}
+
+.form-grid input[readonly] {
+  background: #f3f6f3;
+  color: #333;
+}
+
+/* fokus */
+.form-grid input:focus {
+  outline: none;
+  border-color: #1b5e20;
+  box-shadow: 0 0 0 4px rgba(27,94,32,0.06);
+}
+
+/* tombol area (baris bawah) */
+.form-buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* tombol umum */
+.form-buttons .btn {
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* primary */
+.form-buttons .btn {
+  background: #1b5e20;
+  color: #fff;
+  border-color: rgba(0,0,0,0.06);
+}
+.form-buttons .btn:hover {
+  background: #2a7b35;
+}
+
+/* ghost */
+.form-buttons .btn.ghost {
+  background: transparent;
+  color: #1b5e20;
+  border-color: #1b5e20;
+}
+.form-buttons .btn.ghost:hover {
+  background: #e9f6ea;
+}
+
+/* ketika tombol ditempatkan di kiri pada layar kecil */
+@media (max-width: 520px) {
+  .form-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .form-buttons .btn { width: 100%; }
+}
+
+/* spacing ekstra agar form tidak terlalu menempel ke paket di atas */
+.paket + .form-wrapper,
+.form-wrapper + .paket,
+.form-wrapper { margin-top: 28px; }
+
+/* styling kecil untuk label inline pada desktop agar terlihat seperti di screenshot */
+.form-grid .small-label {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 600;
+  color: #174f24;
+}
